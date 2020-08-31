@@ -1,6 +1,12 @@
 {
   "name": "bsswagger",
   "version": "1.0.0",
+  "description": "Swagger UI Sample",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "author": "技術統括",
   "devDependencies": {
     "clean-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.6.0",
@@ -15,9 +21,5 @@
     "style-loader": "^0.23.1",
     "swagger-ui": "^3.20.7",
     "yaml-loader": "^0.5.0"
-  },
-  "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server --open"
   }
 }

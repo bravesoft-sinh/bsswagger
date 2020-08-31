@@ -1,0 +1,147 @@
+swagger: "2.0"
+info:
+  description: "端末とFirebase連携API一覧"
+  version: "0.9.0"
+  title: "端末管理API"
+basePath: "/"
+tags:
+  - name: "BorrowDevice"
+    description: "端末を借りる"
+  - name: "ReturnDevice"
+    description: "端末を返す"
+  - name: "UpdateDeviceInfo"
+    description: "端末の情報を更新"
+schemes:
+  - "https"
+paths:
+  /BorrowDevice:
+    post:
+      tags:
+        - "BorrowDevice"
+      summary: ""
+      description: ""
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: ""
+          required: true
+          schema:
+            $ref: "#/definitions/Device"
+      responses:
+        "200":
+          description: "成功した場合"
+          schema:
+            $ref: "#/definitions/Callback"
+        "500":
+          description: "処理エラー"
+  /ReturnDevice:
+    post:
+      tags:
+        - "ReturnDevice"
+      summary: ""
+      description: ""
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: ""
+          required: true
+          schema:
+            $ref: "#/definitions/Device"
+      responses:
+        "200":
+          description: "成功した場合"
+          schema:
+            $ref: "#/definitions/Callback"
+        "500":
+          description: "処理エラー"
+  /UpdateDeviceInfo:
+    post:
+      tags:
+        - "UpdateDeviceInfo"
+      summary: ""
+      description: ""
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: ""
+          required: true
+          schema:
+            $ref: '#/definitions/DeviceInfo'
+      responses:
+        "200":
+          description: "成功した場合"
+          schema:
+            $ref: "#/definitions/Callback"
+        "500":
+          description: "処理エラー"
+definitions:
+  Device:
+    type: "object"
+    properties:
+      data:
+        type: "object"
+        properties:
+          d:
+            type: "string"
+            example: "ABASSKSLSLKSLKSKSLLS"
+            description: "端末ID（ios UUID・Android AndroidID）"
+    xml:
+      name: "Device"
+  DeviceInfo:
+    type: "object"
+    properties:
+      data:
+        type: "object"
+        properties:
+          b:
+            type: "string"
+            example: "90%"
+            description: "端末バッテリー量"
+          d:
+            type: "string"
+            example: "ABASSKSLSLKSLKSKSLLS"
+            description: "端末ID（ios UUID・Android AndroidID）"
+          dn:
+            type: "string"
+            example: "iPhone uuu"
+            description: "端末名"
+          os:
+            type: "string"
+            example: "ios/android"
+            description: "os情報"
+          osv:
+            type: "string"
+            example: "13.1"
+            description: "osバージョン"
+          m:
+            type: "string"
+            example: "iPhone X"
+            description: "端末モジュール"
+          s:
+            type: "string"
+            example: "36.5GB/64GB"
+            description: "端末ストレージ使用量"
+    xml:
+      name: "Device"
+  Callback:
+    type: "object"
+    properties:
+      data:
+        type: "object"
+        properties:
+          s:
+            type: "integer"
+            example: 1
+            format: "int32"

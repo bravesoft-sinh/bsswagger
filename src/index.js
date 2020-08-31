@@ -9,6 +9,6 @@ const ui = SwaggerUI({
 });
 
 ui.initOAuth({
-    appName: "デモプロジェクトAPI仕様書",
+    appName: "Swagger UI Webpack Demo",
     clientId: 'implicit'
 });
