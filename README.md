@@ -4,7 +4,7 @@
      ``` 
      git clone git@github.com:bravesoft-sinh/bsswagger.git
      ```
-* チェクアウトフォルダに遷移して、ライブラリーをインストールする
+* チェクアウトしたフォルダに遷移して、ライブラリーをインストールする
     ``` 
     npm install
     ```
