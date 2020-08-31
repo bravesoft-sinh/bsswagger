@@ -1,10 +1,10 @@
 # Swagger UI
 ## OTA反映手順
-* プロジェクトダウンロード
+* プロジェクトチェックアウト
      ``` 
      git clone git@github.com:bravesoft-sinh/bsswagger.git
      ```
-* ライブラリーをインストールする
+* チェクアウトフォルダに遷移して、ライブラリーをインストールする
     ``` 
     npm install
     ```
