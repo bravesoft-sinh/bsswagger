@@ -1,10 +1,16 @@
 # Swagger UI
 ## OTA反映手順
-* プロジェクトチェックアウト
+* API仕様書を炉カールにチェックアウトする
      ``` 
-     git clone git@github.com:bravesoft-sinh/bsswagger.git
+     git clone git@github.com:bravesoft-sinh/swagger-sample.git
      ```
-* チェクアウトしたフォルダに遷移して、ライブラリーをインストールする
+
+* チェックアウトしたプロジェクトに移動して、サブのジュールとして`swagger ui`テンプレートをチェックアウトする
+   ```
+   git submodule add git@github.com:bravesoft-sinh/bsswagger.git 
+   ``` 
+
+* サブモジュールの`bsswagger`フォルダにに遷移して、ライブラリーをインストールする
     ``` 
     npm install
     ```
