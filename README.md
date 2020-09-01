@@ -15,9 +15,8 @@
     npm install
     ```
 
-* API仕様書（yamlファイル）をsrcフォルダーの直下にコピーする
 * `src/index.js`ファイルの4行目のyamlファイルを更新する
-ぎt
+
 * プロジェクトビルド
     ```
     npm run build
