@@ -1,5 +1,8 @@
 # Swagger UI
 ## OTA反映手順
+* 前提条件
+    * nodejs12以上インストールされること
+    
 * API仕様書を炉カールにチェックアウトする
      ``` 
      git clone git@github.com:bravesoft-sinh/swagger-sample.git
